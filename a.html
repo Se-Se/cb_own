@@ -1,15 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-  <div>
-    br5
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="#" id="btn" onclick = "chatend.open(); return false;">
+      <button>111</button>
+    </a>
+  </body>
+  <script>
+  //   var a = document.getElementById('btn')
+  // a.onclick =function(){
+  //   console.log(111)
+  //   window.open("https://dev-chat-oc.toast.com:9528/nhn-cs/hangame/m/index",'_blank')
+  // }
+  // function btn(){
+  //   console.log(1113)
+  //   window.open("https://dev-chat-oc.toast.com:9528/nhn-cs/hangame/m/index",'_blank')
+  // }
+//   window.chatend = window.chatend || {
+//     ROOT: 'https://alpha-chat-oc.toast.com/nhn-cs/hangame/m/index/',
+//     chatwin : null
+// }; !
+// function() {
+//     chatend.style = function(e) {
+//         if (e) {
+//             var t = document.getElementsByTagName("head")[0] || document.body,
+//             n = document.createElement("style");
+//             n.type = "text/css";
+//             t.appendChild(n);
+//             if ("textContent" in n) n.textContent = e;
+//             else if (n.styleSheet) n.styleSheet.cssText = e
+//         }
+//     };
+//     chatend.open = function() {
+//         if (chatend.chatwin == null || chatend.chatwin.closed) {
   
-</body>
+//           console.log(window.open('about:blank', '_blank'))
+//           chatend.chatwin = window.open('about:blank', '_blank')
+//           if(navigator.userAgent.indexOf("Chrome")<0 && navigator.userAgent.indexOf("Edge")<0 ) {
+//             console.log(1)
+//             console.log(window)
+//             window.open('https://alpha-chat-oc.toast.com/nhn-cs/hangame/m/index/', '_blank')
+//     			} else{
+            
+//           }
+//         	console.log(chatend)
+// 	    	chatend.setChatUrl(chatend.ROOT);
+//         } else {
+//         	chatend.chatwin.focus();
+//         }
+//     }
+    
+//     chatend.setChatUrl = function(url) {
+//     	if (chatend.chatwin != null) {
+//     			if(navigator.userAgent.indexOf("Firefox")>0) {
+//     				chatend.chatwin.location.assign(url);
+//     			} else {
+//             console.log(chatend)
+//     				chatend.chatwin.location = url;
+//             console.log(chatend)
+//     			}
+//     		chatend.chatwin.focus();
+//     	} else {
+//     		window.location.href = url;
+//     	}
+//     }
+    
+//     chatend.chatButton = function() {
+//     	chatend.style(['#YSF-BTN-HOLDER{position: fixed;border-radius:50%;text-align:center;cursor: pointer;right: 30px;bottom: 70px;z-index: 99;width: 64px;height: 64px;box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2); -ms-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2); background: #6a3ecf url("//alpha-oc.toast.com/hc/static/img/common/ic-logo-toast-contact-s.svg") no-repeat center 12px; background-size: 22px auto; border: none; font-size: 13px; color: #fff; padding-top: 36px; line-height: 20px; overflow: hidden;}'].join(' '));
+//         var div = document.createElement("div");
+//         div.className = "layer-1";
+//         div.setAttribute("id", "YSF-BTN-HOLDER");
+//         document.body.appendChild(div);
+//         div.onclick = function() {
+//             chatend.open();
+//         };
+//        	div.innerHTML = 'chat';
+//     };
+// } ();
+window.chatend = window.chatend || {
+    ROOT: 'https://alpha-chat-oc.toast.com/nhn-cs/hangame/m/index/',
+    chatwin : null
+}; !
+function() {
+    chatend.style = function(e) {
+        if (e) {
+            var t = document.getElementsByTagName("head")[0] || document.body,
+            n = document.createElement("style");
+            n.type = "text/css";
+            t.appendChild(n);
+            if ("textContent" in n) n.textContent = e;
+            else if (n.styleSheet) n.styleSheet.cssText = e
+        }
+    };
+    chatend.open = function() {
+    if (chatend.chatwin == null || chatend.chatwin.closed) {
+    if(navigator.userAgent.indexOf("Version") > 0 && navigator.userAgent.indexOf("Edge")<0  ) {
+        window.open('https://alpha-chat-oc.toast.com/nhn-cs/hangame/m/index/', '_blank')
+      } else{
+      chatend.chatwin = window.open('about:blank', '_blank');
+    chatend.setChatUrl(chatend.ROOT);
+      }
+    } else {
+      chatend.chatwin.focus();
+    }
+}
+    
+    chatend.setChatUrl = function(url) {
+    	if (chatend.chatwin != null) {
+    			if(navigator.userAgent.indexOf("Firefox")>0) {
+    				chatend.chatwin.location.assign(url);
+    			} else {
+    				chatend.chatwin.location = url;
+    			}
+    		chatend.chatwin.focus();
+    	} else {
+    		window.location.href = url;
+    	}
+    }
+    
+    chatend.chatButton = function() {
+    	chatend.style(['#YSF-BTN-HOLDER{position: fixed;border-radius:50%;text-align:center;cursor: pointer;right: 30px;bottom: 70px;z-index: 99;width: 64px;height: 64px;box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2); -ms-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2); background: #6a3ecf url("//alpha-oc.toast.com/hc/static/img/common/ic-logo-toast-contact-s.svg") no-repeat center 12px; background-size: 22px auto; border: none; font-size: 13px; color: #fff; padding-top: 36px; line-height: 20px; overflow: hidden;}'].join(' '));
+        var div = document.createElement("div");
+        div.className = "layer-1";
+        div.setAttribute("id", "YSF-BTN-HOLDER");
+        document.body.appendChild(div);
+        div.onclick = function() {
+            chatend.open();
+        };
+       	div.innerHTML = 'chat';
+    };
+} ();
+
+// &&navigator.userAgent.toLowerCase().indexOf('safari')<0
+  </script>
 </html>
